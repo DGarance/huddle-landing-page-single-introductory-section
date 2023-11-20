@@ -9,21 +9,170 @@
 :root {
   --violet: hsl(257, 40%, 49%);
   --soft-magenta: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
 }
 
-body{
+html {
+  min-height: 100vh;
+}
+
+body {
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--violet);
+  /* padding: 30px; */
+  min-height: 100vh;
+  color: var(--white);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.huddle-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.huddle-logo {
+  margin: 50px 35px;
+}
+
+.huddle-container-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-img {
+  width: 50%;
+  max-width: 220px;
+}
+
+.huddle-container-content {
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.huddle-img-container {
+  padding-bottom: 30px;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.huddle-content-text {
+  width: 95%;
+  text-align: center;
+}
+
+.content-title {
+  font-family: "Poppins", sans-serif;
+  font-size: calc(25px + 1.5vw);
+  padding: 25px 0;
+}
+
+.content-descritption {
+  font-size: calc(14px + 0.5vw);
+  line-height: 1.5;
+}
+
+.register-btn {
+  background-color: var(--white);
+  padding: 15px;
+  width: 100%;
+  max-width: 200px;
+  border: none;
+  border-radius: 50px;
+  margin: 30px 0;
+  color: var(--violet);
+  transition: 0.5s;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.register-btn:hover {
+  background-color: var(--soft-magenta);
+  transition: 0.5s;
+  color: var(--white);
+}
+
+.huddle-footer-container {
+  width: 100%;
+  padding: 0 35px 20px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.social-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  border: solid 1px var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.social-icon-box:hover {
+  border: solid 1px var(--soft-magenta);
+  color: var(--soft-magenta);
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  body {
     background-image: url(../images/bg-desktop.svg);
-    background-color: var(--violet);
-    margin: 100px 
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+
+  .huddle-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-img {
+    width: 100%;
+  }
+
+  .huddle-container-content {
+    display: flex;
+    flex-direction: row;
+    padding: 45px;
+  }
+
+  .huddle-img-container {
+    width: 100%;
+    margin-right: 50px;
+  }
+
+  .huddle-content-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 85%;
+  }
+  .footer-social {
+    justify-content: flex-end;
+  }
 }
 
-.container{
-    display: flex;
-}
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 25px;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  /* color: hsl(228, 45%, 44%); */
+  color: var(--white);
 }
